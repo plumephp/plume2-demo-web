@@ -1,0 +1,24 @@
+mysql:
+  default: mysql
+  driver: mysql
+  host: 127.0.0.1
+  port: 3306
+  database: plume
+  username: dev
+  password: 123456
+  #charset: utf8
+  #collation : utf8_unicode_ci
+
+redis:
+  host: 127.0.0.1
+  port: 6379
+  pconnect: true
+
+session:
+  auto_start: true
+
+defaults:
+  router:
+    bundle: Ace
+    controller: IndexController
+    action: index

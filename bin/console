@@ -1,0 +1,22 @@
+#!/usr/bin/env php
+<?php
+require_once(__DIR__.'/../vendor/autoload.php');
+
+use Symfony\Component\Console\Application;
+use Plume\Command\CacheClearCommand;
+use Plume\Command\ModelGenerateCommand;
+use Plume\Command\EntityGenerateCommand;
+use Plume\Command\UpdateDatabaseCommand;
+
+define ('CONSOLE_PATH', __DIR__);
+
+$application = new Application();
+
+$application->add(new CacheClearCommand);
+$application->add(new ModelGenerateCommand);
+$application->add(new EntityGenerateCommand);
+$application->add(new UpdateDatabaseCommand);
+
+$application->run();
+
+?>

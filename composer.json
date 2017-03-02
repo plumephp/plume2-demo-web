@@ -1,0 +1,10 @@
+{
+    "require": {
+        "plume/plume": "dev-plume2"
+    },
+		"autoload": {
+			"psr-4":{
+				"": "src/"
+			}
+		}
+}
